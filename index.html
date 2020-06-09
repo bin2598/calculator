@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Heloobin</title>
+        <link rel="stylesheet" href="home.css">
+    </head>
+
+<body>
+
+<div id = "main">
+    <h1>Calculator</h1>
+    <input type="text" id="in1" onchange="main()">
+    <input type="text" id="in2" onchange="main()" required><br>
+    <!-- <input type="text" [value]='result'> -->
+    
+    <button onclick="add()" id="bt1">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">x</button>
+    <button onclick="div()">/</button>
+    
+    <p>result :</p>
+    <div id="res">
+    </div>
+
+    </div>
+
+</body>
+
+<script>
+
+    function main(){
+    in1 = document.getElementById('in1').value;
+    in2 = document.getElementById('in2').value;
+    console.log(in1)
+//   in1 = Number(in1)
+//   in2 = Number(in2)
+}
+
+
+    function add(){        
+        var res = Number(in1) + Number(in2)
+        console.log(res);
+        
+        document.getElementById('res').innerHTML = res;
+    }
+    function sub(){
+        var res = in1 - in2
+        console.log(res);
+        document.getElementById('res').innerText = res;
+
+    }
+    function mul(){
+        var res = in1 * in2
+        console.log(res);
+        document.getElementById('res').innerText = res;
+
+    }
+    function div(){
+        var res = in1 / in2
+        console.log(res);
+        document.getElementById('res').innerHTML = res;
+
+    }
+
+</script>
+
+</html>
